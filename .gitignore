@@ -1,0 +1,4 @@
+.settings/*
+bin-debug/*
+html-template/*
+.svn/*
