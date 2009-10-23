@@ -5,14 +5,16 @@
 	<mx:Script>
 		<![CDATA[
 			import com.gskinner.utils.PerformanceTest;
-			import performancetests.ClassInstanceVersusHasOwnProperty;
+			
+			import performancetests.Objects;
 			
 			protected function onCreationComplete():void
 			{
 				// Wait, why is this a Flex app?
+				// So I can test Flex stuffs?
 				var perfTest:PerformanceTest = PerformanceTest.getInstance();
 				perfTest.out = out;
-				perfTest.testSuite(new ClassInstanceVersusHasOwnProperty());
+				perfTest.testSuite(new Objects(), null, 10);
 			}
 			
 			protected function out(str:*):void
